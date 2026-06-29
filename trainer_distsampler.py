@@ -605,8 +605,8 @@ def read_capture_file(filename, exclude_after=0, exclude_before=0):
                                             routine_widen, routine_squint, routine_dilate, routine_state)
             
             #print(f"Read frame: Pitch={routine_pitch}, Yaw={routine_yaw}, sizeRight={len(image_right_data)}, sizeLeft={len(image_left_data)}, timeData={timestamp}, timeLeft={video_timestamp_left}, timeRight={video_timestamp_right}")
-    if not os.path.exists("./ibl_db_%d.pt" % crc):
-        torch.save(ibl_db, "./ibl_db_%d.pt" % crc)
+    # if not os.path.exists("./ibl_db_%d.pt" % crc):
+    #     torch.save(ibl_db, "./ibl_db_%d.pt" % crc)
 
     # Convert to sorted lists for processing
     left_frames = sorted([(ts, img) for ts, img in all_eye_frames_left.items()])
